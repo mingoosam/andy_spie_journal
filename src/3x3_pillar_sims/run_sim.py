@@ -23,7 +23,7 @@ def dump_geometry_image(model, pm):
 def dump_data(neighbor_index, data):
     
     path_save = "/develop/data/spie_journal_2023"
-    folder_name = "test_dataset"
+    folder_name = "gaussian_dataset"
     folder_path = os.path.join(path_save, folder_name)
 
     if not os.path.exists(folder_path):
@@ -32,7 +32,7 @@ def dump_data(neighbor_index, data):
     else:
         print("Folder path already exists")
 
-    dataset_name = "%s_final_test.pkl" % (str(neighbor_index).zfill(6))
+    dataset_name = "%s.pkl" % (str(neighbor_index).zfill(6))
     filename = os.path.join(folder_path, dataset_name)
 
     with open(filename, "wb") as f:
@@ -66,6 +66,7 @@ def run(radii_list, neighbor_index, params, pm):
     # Build Simulation object # 
     pm.source = model.source
     model.build_sim(pm.sim_params)
+
     # Build flux monitor #    
     model.build_flux_mon(pm.flux_params)
     model.flux_mon = [model.downstream_flux_object, model.source_flux_object]
@@ -114,13 +115,12 @@ def run(radii_list, neighbor_index, params, pm):
     data["near_fields_2881"]["ey"] = model.dft_field_ey_2881
     data["near_fields_2881"]["ez"] = model.dft_field_ez_2881
 
-    #data["eps_data"] = model.eps_data
+    data["eps_data"] = model.eps_data
     data["sim_time"] = elapsed_time
     data["radii"] = radii_list
 
     dump_data(neighbor_index, data) 
     #dump_geometry_image(model, pm)
-    #embed()
 if __name__=="__main__":
 
     params = yaml.load(open('../config.yaml'), Loader = yaml.FullLoader).copy()
