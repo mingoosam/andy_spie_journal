@@ -1,0 +1,60 @@
+Using MPI version 4.0, 4 processes
+grid size = 3
+building source
+building sim
+building flux monitor
+downstream_flux_object created
+source_flux_object created
+running sim
+-----------
+Initializing structure...
+Splitting into 4 chunks by voxels
+time for choose_chunkdivision = 0.000108957 s
+Working in 3D dimensions.
+Computational cell is 2.05 x 2.05 x 4.9 with resolution 20
+     block, center = (0,0,-1.68)
+          size (1e+20,1e+20,1.56)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (2.0736,2.0736,2.0736)
+     block, center = (0,0,0.78)
+          size (1e+20,1e+20,3.36)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (1.96,1.96,1.96)
+     cylinder, center = (-0.68,0.68,-0.39)
+          radius 0.20072, height 1.02, axis (0, 0, 1)
+          dielectric constant epsilon diagonal = (12.1104,12.1104,12.1104)
+     cylinder, center = (0,0.68,-0.39)
+          radius 0.15445, height 1.02, axis (0, 0, 1)
+          dielectric constant epsilon diagonal = (12.1104,12.1104,12.1104)
+     cylinder, center = (0.68,0.68,-0.39)
+          radius 0.17759, height 1.02, axis (0, 0, 1)
+          dielectric constant epsilon diagonal = (12.1104,12.1104,12.1104)
+     cylinder, center = (-0.68,0,-0.39)
+          radius 0.08707, height 1.02, axis (0, 0, 1)
+          dielectric constant epsilon diagonal = (12.1104,12.1104,12.1104)
+     cylinder, center = (0,0,-0.39)
+          radius 0.10316, height 1.02, axis (0, 0, 1)
+          dielectric constant epsilon diagonal = (12.1104,12.1104,12.1104)
+     cylinder, center = (0.68,0,-0.39)
+          radius 0.14239, height 1.02, axis (0, 0, 1)
+          dielectric constant epsilon diagonal = (12.1104,12.1104,12.1104)
+     cylinder, center = (-0.68,-0.68,-0.39)
+          radius 0.14641, height 1.02, axis (0, 0, 1)
+          dielectric constant epsilon diagonal = (12.1104,12.1104,12.1104)
+     cylinder, center = (0,-0.68,-0.39)
+          radius 0.15546, height 1.02, axis (0, 0, 1)
+          dielectric constant epsilon diagonal = (12.1104,12.1104,12.1104)
+     ...(+ 1 objects not shown)...
+time for set_epsilon = 0.444432 s
+-----------
+field decay(t = 50.025000000000006): 0.03532858527273493 / 0.03532858527273493 = 1.0
+on time step 3667 (time=91.675), 0.00109086 s/step
+field decay(t = 100.05000000000001): 0.0001666341742970975 / 0.03532858527273493 = 0.004716695361863203
+field decay(t = 150.07500000000002): 1.9287387043745507e-05 / 0.03532858527273493 = 0.0005459428079230412
+on time step 7599 (time=189.975), 0.0010175 s/step
+field decay(t = 200.10000000000002): 6.4926850525849534e-06 / 0.03532858527273493 = 0.00018377993351451088
+field decay(t = 250.125): 1.4062594266279728e-06 / 0.03532858527273493 = 3.980514407162698e-05
+run 0 finished at t = 250.125 (10005 timesteps)
+Folder path already exists
+
+Elapsed run time = 11.1955 s
